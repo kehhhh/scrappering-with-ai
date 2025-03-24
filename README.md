@@ -32,7 +32,7 @@ A powerful web scraping tool that combines Crawl4AI for asynchronous web scrapin
 2. Create and configure your environment:
    ```bash
    # Copy the example environment file
-   cp env.example .env
+   cp .env.example .env
 
    # Edit .env with your settings
    # Required: Add your Groq API key
@@ -54,35 +54,27 @@ A powerful web scraping tool that combines Crawl4AI for asynchronous web scrapin
 
 ## Usage
 
-1. Run the script using the provided run script for your OS:
-
-   ### Windows
+1. Activate the virtual environment:
    ```bash
-   run.bat
+   # Windows
+   venv\Scripts\activate.bat
+
+   # macOS/Linux
+   source venv/bin/activate
    ```
 
-   ### macOS/Linux
+2. Run the scraper:
    ```bash
-   ./run.sh
-   ```
-
-   Or manually:
-   ```bash
-   # Activate the virtual environment
-   # Windows: venv\Scripts\activate.bat
-   # macOS/Linux: source venv/bin/activate
-
-   # Run the script
    python main.py
    ```
 
-2. The script will:
+3. The script will:
    - Start crawling the configured URL
    - Extract venue information using AI
    - Save results to a CSV file
    - Display progress and statistics
 
-3. Press Ctrl+C at any time to stop the crawler
+4. Press Ctrl+C at any time to stop the crawler
 
 ## Configuration
 
@@ -125,9 +117,7 @@ scrappering-with-ai/
 ├── requirements.txt    # Dependencies
 ├── setup.sh           # Setup script for Unix-based systems
 ├── setup.bat          # Setup script for Windows
-├── run.sh             # Run script for Unix-based systems
-├── run.bat            # Run script for Windows
-├── env.example        # Example environment configuration
+├── .env.example       # Example environment configuration
 └── .env               # Your environment configuration (not in repo)
 ```
 
